@@ -15,11 +15,11 @@ class Application():
   def __call__(self, environ, start_response):
     request = webob.Request(environ)
     
-    if request.path_info == '/HTTP':
+    if request.path_info == '/babu.p':
       application = HTTP.Application()
       return application(environ, start_response)
     else:
-      if request.path_info == '/HTTPS':
+      if request.path_info == '/babu.ps':
         application = HTTPS.Application()
         return application(environ, start_response)
     
